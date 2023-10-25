@@ -1,3 +1,11 @@
+def print_menu():
+    print('Menu')
+    print('-------------')
+    print('1. Encode')
+    print('2. Decode')
+    print('3. Quit')
+    print()
+    return None
 def encode(password):
     encoded = ''
     for char in password:
@@ -9,17 +17,12 @@ def encode(password):
 def main():
     user_input = 0
     while user_input != 3:
-        print('Menu')
-        print('-------------')
-        print('1. Encode')
-        print('2. Decode')
-        print('3. Quit')
-        print()
-
+        print_menu()
         user_input = int(input('Please enter an option: '))
         if user_input == 1:
             password = input('Please enter your password to encode: ')
             encoded_password = encode(password)
             print('Your password has been encoded and stored!')
+        print()
 if __name__ == '__main__':
     main()
